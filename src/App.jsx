@@ -22,7 +22,7 @@ function App() {
       setErro("O campo não pode estar vazio");
       return;
     }
-    else if (novaLista.includes(valorInput)) {
+    else if (novaLista.some(item => item.toLowerCase() === valorInput.toLowerCase())) {
       setErro("Item já existe na lista")
       return;
     }
