@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemLista = ({itemLista, listaMercado, setListaMercado}) => {
+const ItemLista = ({itemLista, listaMercado, setListaMercado, setErro}) => {
   
     const removerItemDaLista = () => {
       const novaLista = [...listaMercado];
@@ -11,7 +11,7 @@ const ItemLista = ({itemLista, listaMercado, setListaMercado}) => {
     <>
     <li className='flex justify-between gap-2'>
       <p className='text-xl px-2'>{itemLista}</p>
-      <button className="rounded-md bg-red-600 text-white px-2 cursor-pointer hover:bg-red-500 transition" onClick={() => removerItemDaLista()}>Remover</button>
+      <button className="rounded-md bg-red-600 text-white px-2 cursor-pointer hover:bg-red-500 transition" onClick={() => {setErro(""); removerItemDaLista()}}>Remover</button>
     </li>
     </>
   )
