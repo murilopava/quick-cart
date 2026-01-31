@@ -65,12 +65,12 @@ O projeto é composto por dois componentes principais:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/supermarket-list.git
+git clone https://github.com/seu-usuario/quick-cart.git
 ```
 
 2. Navegue até o diretório do projeto:
 ```bash
-cd supermarket-list
+cd quick-cart
 ```
 
 3. Instale as dependências:
