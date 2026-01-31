@@ -22,7 +22,7 @@ Este projeto foi criado com fins educacionais, focando em:
 
 - Adicionar produtos à lista de compras através de um campo de input
 - **Validação de input vazio** - Não permite adicionar itens vazios ou apenas com espaços (usando `trim()`)
-- **Prevenção de duplicatas** - Impede a adição de itens que já existem na lista
+- **Prevenção de duplicatas inteligente** - Impede a adição de itens que já existem na lista, ignorando diferenças entre maiúsculas e minúsculas (ex: "Banana" e "banana" são considerados iguais)
 - **Sistema de mensagens de erro** - Exibe feedback visual quando:
   - O campo está vazio
   - O item já existe na lista
@@ -54,7 +54,8 @@ O projeto é composto por dois componentes principais:
 - Props - Para comunicação entre componentes (App → ItemLista)
 - Map - Para renderizar a lista de itens dinamicamente
 - Filter - Para remover itens específicos da lista
-- Includes - Para verificar duplicatas na lista
+- Some - Para verificar duplicatas com comparação personalizada
+- toLowerCase - Para comparação case-insensitive (ignora maiúsculas/minúsculas)
 - Spread Operator - Para criar cópias imutáveis do array
 - Trim - Para remover espaços em branco no início e fim do input
 - Event Handling - onChange, onClick, onSubmit
@@ -64,12 +65,12 @@ O projeto é composto por dois componentes principais:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/quick-cart.git
+git clone https://github.com/seu-usuario/supermarket-list.git
 ```
 
 2. Navegue até o diretório do projeto:
 ```bash
-cd quick-cart
+cd supermarket-list
 ```
 
 3. Instale as dependências:
@@ -82,7 +83,7 @@ npm install
 npm start
 ```
 
-5. Abra [http://localhost:5173](http://localhost:5173) no seu navegador para ver a aplicação.
+5. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação.
 
 ## Como Usar
 
@@ -97,6 +98,7 @@ npm start
 
 - **Campo vazio:** Se tentar adicionar sem digitar nada (ou apenas espaços), aparecerá a mensagem "O campo não pode estar vazio"
 - **Item duplicado:** Se tentar adicionar um item que já existe na lista, aparecerá a mensagem "Item já existe na lista"
+  - A verificação ignora diferenças entre maiúsculas e minúsculas (ex: "Maçã", "maçã" e "MAÇÃ" são considerados duplicados)
 - As mensagens de erro desaparecem automaticamente quando você começa a digitar novamente ou remove um item da lista
 
 ## Autor
