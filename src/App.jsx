@@ -5,7 +5,8 @@ function App() {
   // let listaMercado = ["Banana", "Maçã", "Laranja", "Ovo"];
   const [listaMercado, setListaMercado] = useState([]);
 
-  const inputAdicionar = useRef(); 
+  const inputAdicionar = useRef();
+ 
   // console.log(inputAdicionar.current);
 
   // Hook
@@ -27,23 +28,26 @@ function App() {
   }
 
   return (
-    <>
-      <h1 className="text-3xl">Lista de Mercado</h1>
-      <input ref={inputAdicionar} type="text" placeholder="Digite um item"/>
-      <button onClick={() => adicionarElementoNaLista()}>Adicionar</button>
+    <div className="max-w-96 w-full flex flex-col items-center gap-4">
+      <h1 className="text-4xl font-bold">Lista de Mercado</h1>
+
+      <div className="w-full flex gap-2">
+        <input className="w-full border border-gray-600 rounded-md px-2" ref={inputAdicionar} type="text" placeholder="Digite um item"/>
+        <button className="rounded-md bg-gray-800 text-white px-2 cursor-pointer hover:bg-gray-500 transition" onClick={() => adicionarElementoNaLista()}>Adicionar</button>
+      </div>
 
       
       {listaMercado.length > 0 ? (
-        <ul>
+        <ul className="w-full flex flex-col gap-2">
         {listaMercado.map((itemLista, index) => (
         <ItemLista key={index} itemLista={itemLista} listaMercado={listaMercado} setListaMercado={setListaMercado}/>
         ))}
         </ul>
       ) : (
-        <p>Lista Vazia</p>
+        <p className="text-xl">Sua lista esta vazia!</p>
       )}
       
-    </>
+    </div>
   )
 
   // Tag vazia (<> </>) é um fragmento React

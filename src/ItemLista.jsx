@@ -9,9 +9,9 @@ const ItemLista = ({itemLista, listaMercado, setListaMercado}) => {
     }
     return (
     <>
-    <li>
-      <p>{itemLista}</p>
-      <button onClick={() => removerItemDaLista()}>Remover</button>
+    <li className='flex justify-between gap-2'>
+      <p className='text-xl px-2'>{itemLista}</p>
+      <button className="rounded-md bg-red-600 text-white px-2 cursor-pointer hover:bg-red-500 transition" onClick={() => removerItemDaLista()}>Remover</button>
     </li>
     </>
   )
