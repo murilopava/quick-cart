@@ -80,7 +80,7 @@ npm install
 
 4. Inicie o servidor de desenvolvimento:
 ```bash
-npm start
+npm run dev
 ```
 
 5. Abra [http://localhost:5173](http://localhost:5173) no seu navegador para ver a aplicação.
