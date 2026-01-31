@@ -65,12 +65,12 @@ O projeto é composto por dois componentes principais:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/supermarket-list.git
+git clone https://github.com/seu-usuario/quick-cart.git
 ```
 
 2. Navegue até o diretório do projeto:
 ```bash
-cd supermarket-list
+cd quick-cart
 ```
 
 3. Instale as dependências:
@@ -80,7 +80,7 @@ npm install
 
 4. Inicie o servidor de desenvolvimento:
 ```bash
-npm start
+npm run dev
 ```
 
 5. Abra [http://localhost:5173](http://localhost:5173) no seu navegador para ver a aplicação.
