@@ -7,6 +7,5 @@
     "outDir": "./dist",
     "rootDir": "./"
   },
-  "exclude": ["node_modules"],
-  "include": ["./**/*.ts", "./generated/**/*.ts"]
+  "exclude": ["node_modules", "dist", "generated"]
 }
